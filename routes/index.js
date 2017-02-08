@@ -10,4 +10,36 @@ router.get('/', function(req, res, next) {
       });
 });
 
+/* GET Projects page. */
+router.get('/Projects', function(req, res, next) {
+    res.render('Projects',
+        {
+            title: 'Projects'
+        });
+});
+
+/* GET Services page. */
+router.get('/Services', function(req, res, next) {
+    res.render('Services',
+        {
+            title: 'Services'
+        });
+});
+
+/* GET AboutMe page. */
+router.get('/AboutMe', function(req, res, next) {
+    res.render('AboutMe',
+        {
+            title: 'About Me'
+        });
+});
+
+/* GET ContactMe page. */
+router.get('/ContactMe', function(req, res, next) {
+    res.render('ContactMe',
+        {
+            title: 'Contact Me'
+        });
+});
+
 module.exports = router;
