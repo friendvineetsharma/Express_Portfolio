@@ -1,1 +1,6 @@
 theme: jekyll-theme-cayman
+
+title: Portfolio
+description: Have a look at the Portfolio: https://harrykural-portfolio.herokuapp.com/
+
+show_downloads: true
