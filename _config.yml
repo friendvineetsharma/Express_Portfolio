@@ -1,9 +1,0 @@
-
-url: https://harrykural-portfolio.herokuapp.com
-
-# Sharing settings
-  sharing:
-    twitter:    false
-    facebook:   false
-    gplus:      false
-    hn:         false
