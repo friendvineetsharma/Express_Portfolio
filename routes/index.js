@@ -6,7 +6,7 @@ router.get('/', function(req, res, next) {
   res.render('index',
       {
         title: 'Portfolio',
-        message: 'Portfolio of Harshit Sharma made with ExpressJS'
+        message: 'Portfolio of Harshit Sharma will be made with ExpressJS'
       });
 });
 
