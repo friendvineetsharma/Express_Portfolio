@@ -1,5 +1,6 @@
-var express = require('express');
-var router = express.Router();
+// express setup
+let express = require('express');
+let router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -42,4 +43,5 @@ router.get('/ContactMe', function(req, res, next) {
         });
 });
 
+// make this file public
 module.exports = router;

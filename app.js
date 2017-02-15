@@ -5,12 +5,120 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+// for contact form
+var nodemailer = require('nodemailer');
+
 var index = require('./routes/index');
 var users = require('./routes/users');
-// reference the content controller we created
-let content = require('./routes/content');
 
 var app = express();
+
+// contact form POST data
+app.post('/ContactMe', function (req, res) {
+
+    // for robots
+    if (req.body.company)
+    {
+      res.render('ContactMe',
+      {
+          title: 'Contact Me',
+          err: true,
+          page: 'ContactMe',
+          type: 'empty',
+          body: req.body.message,
+          name: req.body.name,
+          email: req.body.email,
+          msg: 'Robot Detected.',
+          description: 'spam'
+      });
+        return;
+    }
+
+    // required fields are filled
+    if (! req.body.name || ! req.body.email || ! req.body.message)
+    {
+        res.render('ContactMe',
+            {
+                title: 'Contact Me',
+                err: true,
+                page: 'ContactMe',
+                type: 'empty',
+                body: req.body.message,
+                name: req.body.name,
+                email: req.body.email,
+                msg: 'Thank you.',
+                description: 'Email successfully sent.'
+            });
+        return;
+    }
+
+    // valid email address
+    let email_check = validate(req.body.email);
+
+    if (email_check == false)
+    {
+        res.render('ContactMe',
+            {
+                title: 'Contact Me',
+                err: true,
+                page: 'ContactMe',
+                type: 'empty',
+                body: req.body.message,
+                name: req.body.name,
+                email: req.body.email,
+                msg: 'Enter a valid email.',
+                description: 'Email successfully sent.'
+            });
+        return;
+    }
+
+    // set mailing address
+    let mailOpts, smtpTrans;
+
+    // nodemailer
+    smtpTrans = nodemailer.createTransport({
+      service: 'Gmail',
+        auth: {
+            user: "bsp42333@gmail.com",
+            pass: "003334287hs"
+        }
+    });
+
+    mailOpts = {
+        from: req.body.name + '&lt;' + req.body.email + '&gt;',
+        to: 'bsp42333@gmail.com',
+        subject: 'Portfolio contact',
+        text: req.body.message + ' || NAME:' + req.body.name + ' || EMAIL:' + req.body.email
+    };
+
+    smtpTrans.sendMail(mailOpts, function (error, info) {
+
+      // not sent
+        if (error)
+        {
+          res.render('ContactMe',
+              {
+                  title: 'Contact Me',
+                  page: 'ContactMe',
+                  type: 'error',
+                  description: 'email not sent'
+              });
+        }
+        else
+        {
+            res.render('ContactMe',
+                {
+                    title: 'Contact Me',
+                    page: 'ContactMe',
+                    type: 'success',
+                    description: 'email successfully sent'
+                });
+        }
+
+        
+    });
+
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -26,8 +134,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
-// handle all requests at /content with content router
-app.use('/content', content);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
