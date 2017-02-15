@@ -6,8 +6,8 @@ let router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index',
       {
-        title: 'Portfolio',
-        message: 'Portfolio of Harshit Sharma will be made with ExpressJS'
+        title: 'Harshit Sharma',
+        message: 'Hey! Thanks for visiting the website. This portfolio is made with HTML, CSS, JQuery, Javascript, NodeJS, ExpressJS. Remember to checkout the website.'
       });
 });
 
@@ -16,14 +16,6 @@ router.get('/Projects', function(req, res, next) {
     res.render('Projects',
         {
             title: 'Projects'
-        });
-});
-
-/* GET Services page. */
-router.get('/Services', function(req, res, next) {
-    res.render('Services',
-        {
-            title: 'Services'
         });
 });
 
