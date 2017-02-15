@@ -92,7 +92,6 @@ a:focus {
 .navbar-custom .navbar-brand .navbar-toggle {
     padding: 4px 6px;
     font-size: 16px;
-    color: #fff;
 }
 
 .navbar-custom .navbar-brand .navbar-toggle:focus,
@@ -410,12 +409,6 @@ body {
     color: #eeeeee;
 }
 
-#buttons {
-    background-color: #EEEEEE;
-
-}
-
-
 .social:hover {
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
@@ -453,4 +446,7 @@ body {
 }
 #social-li:hover {
     color: #0077B5;
+}
+.navbar-custom .navbar-toggle .icon-bar {
+    background-color: #eeeeee;
 }
