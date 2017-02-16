@@ -16,7 +16,7 @@ router.get('/', function(req, res, next) {
   res.render('index',
       {
         title: 'Harshit Sharma',
-        message: 'Hey! Thanks for visiting the website. This portfolio is made with HTML, CSS, JQuery, Javascript, NodeJS, ExpressJS. Remember to checkout the website.'
+        message: 'Hey! Thanks for visiting this website. This portfolio website is made with HTML, CSS, JQuery, Javascript, NodeJS, ExpressJS. Remember to checkout this website.'
       });
 });
 
