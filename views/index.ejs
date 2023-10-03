@@ -1,24 +1,29 @@
 <% include ./partials/header.ejs %>
-
-<div id="wrap">
-<div class="container">
-  <br />
-  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-    <img class="img-responsive img-circle img-thumbnail" src="/images/me.jpg" style="width:200px;height:200px;" title="Harshit" />
-    <div class="container">
-      <br />
-      <h4>Harshit Sharma</h4>
+<style>
+  #home{
+    margin-top: -10px;
+  }
+  .masthead {
+  height: 100vh;
+  min-height: 500px;
+  background-image: url('https://source.unsplash.com/BtbjCFUvBXs/1920x1080');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+</style>
+<section id="home">
+  <header class="masthead">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12 text-center">
+          <h1 class="">Welcome</h1><br>
+          <div class="d-flex justify-content-center">
+            <p class="lead col-6">✋I am Vineet Sharma, I am an enthusiast ArtificiaL Intelligence 🌐developer. I am in 1st yr Software Engineering Technology - AI 👨‍🎓 in Centennial College. You can 📲 me through discord or ✉️</p>
+          </div>
+          <a href="/AboutMe"><button type="button" class="btn btn-success btn-lg mt-3">About Me</button></a>
+        </div>
+      </div>
     </div>
-  </div>
-
-  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-  <div class="jumbotron">
-    <font color="#263238">
-    <h1><%= title %></h1>
-    <p><%= message %></p>
-    </font>
-  </div>
-  </div>
-</div>
-</div>
-<% include ./partials/footer.ejs %>
+  </header>
+</section>

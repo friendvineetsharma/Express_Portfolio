@@ -1,10 +1,5 @@
-<!-- Name: Harshit Sharma
-Student#: 200333254
-Site address: https://harrykural-portfolio.herokuapp.com/
-Advanced Web Programming - Assignment 1  - Express Portfolio
-Description: This portfolio ebsite is made with extensive
-use of nodeJS and expressJS specialy the express generator
-which builds the file structure so you don't need to start from scratch
+<!-- Name: Vineet Sharma
+Student#: 301364822
 -->
 
 
@@ -19,33 +14,42 @@ which builds the file structure so you don't need to start from scratch
   <!-- Adding Bootstrap -->
   <!-- Latest compiled and minified CSS -->
   <!-- Bootstrap for css -->
-  <link rel="stylesheet" href="/stylesheets/bootstrap.min.css" />
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="/stylesheets/bootstrap-theme.min.css" />
-  <link rel="stylesheet" href="/stylesheets/basicelement.css" />
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-  <!--<script src="//load.sumome.com/" data-sumo-site-id="8e7ec3477b0fe157b16b0ad71dcd191827caf50fa4f16d9d1d212b8852d27483" async="async"></script>-->
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <style>
+    .header ul li{
+      margin: 10px 20px;
+    }
+    .header ul li :hover{
+      background-color: rgb(249, 172, 56);
+    }
+    #footer{
+      position: relative;
+      align-content: end;
+    }
+  </style>
 </head>
 <body>
 
 <!-- mobile -->
-<nav class="navbar navbar-custom">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" id="buttons">
-        <span class="icon-bar top-bar"></span>
-        <span class="icon-bar middle-bar"></span>
-        <span class="icon-bar bottom-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">Home</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href="/Projects">Projects</a></li>
-        <li><a href="/AboutMe">About Me</a></li>
-        <li><a href="/ContactMe">Contact Me</a></li>
+<header class="p-3 text-bg-dark h3 header">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+        <img src="../../images/vlogo.png" width="40" height="32" role="img"> 
+      </a>
+
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <li ><a href="/" class="nav-link px-2 text-white">Home</a></li>
+        <li ><a href="/AboutMe" class="nav-link px-2 text-white">About Me</a></li>
+        <li ><a href="/Projects" class="nav-link px-2 text-white">Projects</a></li>
+        <li ><a href="/ContactMe" class="nav-link px-2 text-white">Contact</a></li>
       </ul>
+
+      
+
+      <div class="text-end">
+        <a href="../../files/VineetResume.pdf" download="VineetResume.pdf"><button type="button" class="btn btn-outline-light me-2 ">Downlaod Resume</button></a>
+      </div>
     </div>
   </div>
-</nav>
+</header>

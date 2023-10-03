@@ -7,8 +7,8 @@ let router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index',
       {
-        title: 'Harshit Sharma',
-        message: 'Hey! Thanks for visiting this website. This portfolio website is made with HTML, CSS, JQuery, Javascript, NodeJS, ExpressJS. Remember to checkout this website.'
+        title: 'Vineet Sharma',
+        message: '✋I am Vineet Sharma, I am an enthusiast ArtificiaL Intelligence 🌐developer. I am in 1st yr Software Engineering Technology - AI 👨‍🎓 in Centennial College. You can 📲 me through discord or ✉️'
       });
 });
 
