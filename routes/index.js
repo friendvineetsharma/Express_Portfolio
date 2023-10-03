@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
   res.render('index',
       {
         title: 'Vineet Sharma',
-        message: '✋I am Vineet Sharma, I am an enthusiast ArtificiaL Intelligence 🌐developer. I am in 1st yr Software Engineering Technology - AI 👨‍🎓 in Centennial College. You can 📲 me through discord or ✉️'
+        message: '✋I am Vineet Sharma, I a m an enthusiast ArtificiaL Intelligence 🌐developer. I am in 1st yr Software Engineering Technology - AI 👨‍🎓 in Centennial College. You can 📲 me through discord or ✉️'
       });
 });
 
@@ -33,6 +33,13 @@ router.get('/ContactMe', function(req, res, next) {
     res.render('ContactMe',
         {
             title: 'Contact Me'
+        });
+});
+
+router.get('/Services', function(req, res, next) {
+    res.render('Services',
+        {
+            title: 'Services'
         });
 });
 

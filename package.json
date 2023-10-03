@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "build": "netlify deploy --prod"
   },
   "dependencies": {
     "body-parser": "~1.16.0",
@@ -13,6 +14,7 @@
     "express": "~4.14.1",
     "morgan": "~1.7.0",
     "nodemailer": "^3.1.0",
-    "serve-favicon": "~2.3.2"
+    "serve-favicon": "~2.3.2",
+    "serverless-http": "^3.2.0"
   }
 }
